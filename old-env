@@ -1,0 +1,46 @@
+# ==================================
+# SECURITY CONFIGURATION
+# ==================================
+TOKEN=1234
+PROTECT_ROUTES=false
+
+# ==================================
+# APPLICATION CONFIGURATION
+# ==================================
+PORT=3333
+RESTORE_SESSIONS_ON_START_UP=true
+APP_URL=http://localhost:3333
+LOG_LEVEL=silent
+
+# ==================================
+# BROWSER CONFIGURATION
+# ==================================
+CLIENT_PLATFORM='Convert ZAP'
+CLIENT_BROWSER='Chrome'
+CLIENT_VERSION='4.0.0'
+
+# ==================================
+# INSTANCE CONFIGURATION
+# ==================================
+INSTANCE_MAX_RETRY_QR=2
+
+# ==================================
+# DATABASE CONFIGURATION
+# ==================================
+MONGODB_ENABLED=true
+#MONGODB_URL=mongodb://127.0.0.1:27017/whatsapp_api
+MONGODB_URL=mongodb+srv://consultaws:Grupoconvertzap123!AWS@cluster0.beg6ngh.mongodb.net
+
+
+# ==================================
+# WEBHOOK CONFIGURATION
+# ==================================
+WEBHOOK_ENABLED=false
+WEBHOOK_URL=https://n8n.meupainelsmm.com.br/webhook/webhook-whats-leo
+WEBHOOK_BASE64=false
+WEBHOOK_ALLOWED_EVENTS=
+
+# ==================================
+# MESSAGE CONFIGURATION
+# ==================================
+MARK_MESSAGES_READ=false

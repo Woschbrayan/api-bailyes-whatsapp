@@ -1,0 +1,875 @@
+{
+	"info": {
+		"_postman_id": "5fb8b708-8f54-4435-a894-9f5f8bf72d8c",
+		"name": "Resgata Facil - API Whatsapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25034781"
+	},
+	"item": [
+		{
+			"name": "Instancias",
+			"item": [
+				{
+					"name": "Criar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"instanceName\": \"{{API_INSTANCE}}\",\r\n    \"key\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/instance/create",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"instance",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Conectar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/instance/connect/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"instance",
+								"connect",
+								"{{API_INSTANCE}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Informações",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/instance/info/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"instance",
+								"info",
+								"{{API_INSTANCE}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Perfil",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/instance/profile/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"instance",
+								"profile",
+								"{{API_INSTANCE}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurar instancias",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/instance/restore",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"instance",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar instancias",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/instance/list",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"instance",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deslogar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/instance/logout/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"instance",
+								"logout",
+								"{{API_INSTANCE}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/instance/delete/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"instance",
+								"delete",
+								"{{API_INSTANCE}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mensagens",
+			"item": [
+				{
+					"name": "Enviar texto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"5519997705920\",\r\n    \"message\": \"Bom dia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/message/text/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"message",
+								"text",
+								"{{API_INSTANCE}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar imagem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://brasatecnologia.com.br/wp-content/themes/brasatecnologia/img/logo.png",
+									"description": "Image you want to send\n(Required) \n",
+									"type": "text"
+								},
+								{
+									"key": "number",
+									"value": "5519997705920",
+									"description": "Recipient Id or Group Id\n(Required)",
+									"type": "text"
+								},
+								{
+									"key": "caption",
+									"value": "Texto",
+									"description": "Message Caption\n(Optional) ",
+									"type": "text"
+								},
+								{
+									"key": "path",
+									"value": "image/png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/message/image/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"message",
+								"image",
+								"{{API_INSTANCE}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "caption",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar video",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://beta.resgatafacil.com/uploads/1748296768_6834e440c2b0a.mp4",
+									"description": "Image you want to send\n(Required) \n",
+									"type": "text"
+								},
+								{
+									"key": "number",
+									"value": "5519997705920",
+									"description": "Recipient Id or Group Id\n(Required)",
+									"type": "text"
+								},
+								{
+									"key": "caption",
+									"value": "Texto",
+									"description": "Message Caption\n(Optional) ",
+									"type": "text"
+								},
+								{
+									"key": "mimetype",
+									"value": "image/png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/message/video/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"message",
+								"video",
+								"{{API_INSTANCE}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "caption",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar documento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://beta.resgatafacil.com/uploads/1748296768_6834e440c2b0a.mp4",
+									"description": "Image you want to send\n(Required) \n",
+									"type": "text"
+								},
+								{
+									"key": "number",
+									"value": "5519997705920",
+									"description": "Recipient Id or Group Id\n(Required)",
+									"type": "text"
+								},
+								{
+									"key": "caption",
+									"value": "Texto",
+									"description": "Message Caption\n(Optional) ",
+									"type": "text"
+								},
+								{
+									"key": "mimetype",
+									"value": "image/png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/message/doc/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"message",
+								"doc",
+								"{{API_INSTANCE}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "caption",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar audio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://beta.resgatafacil.com/uploads/1748296768_6834e440c3a97.ogg",
+									"description": "Image you want to send\n(Required) \n",
+									"type": "text"
+								},
+								{
+									"key": "number",
+									"value": "5519997705920",
+									"description": "Recipient Id or Group Id\n(Required)",
+									"type": "text"
+								},
+								{
+									"key": "mimetype",
+									"value": "audio/ogg; codecs=opus",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/message/audio/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"message",
+								"audio",
+								"{{API_INSTANCE}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "caption",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				},
+				{
+					"name": "Definir status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"5519997705920\",\r\n    \"status\": \"composing\",\r\n    \"delay\": 3000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/message/set-presence/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"message",
+								"set-presence",
+								"{{API_INSTANCE}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "caption",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Etiquetas",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/label/all/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"label",
+								"all",
+								"{{API_INSTANCE}}"
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				},
+				{
+					"name": "Chats na etiqueta",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/label/chats/{{API_INSTANCE}}?id=1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"label",
+								"chats",
+								"{{API_INSTANCE}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chats",
+			"item": [
+				{
+					"name": "Listar conversas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/chat/all/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"chat",
+								"all",
+								"{{API_INSTANCE}}"
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar mensagens de um chat",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/chat/messages/5519997705920/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"chat",
+								"messages",
+								"5519997705920",
+								"{{API_INSTANCE}}"
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				},
+				{
+					"name": "Baixar foto de perfil",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/misc/downProfile/{{API_INSTANCE}}?number=5519997705920",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"misc",
+								"downProfile",
+								"{{API_INSTANCE}}"
+							],
+							"query": [
+								{
+									"key": "number",
+									"value": "5519997705920"
+								}
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				},
+				{
+					"name": "Verificar se numero existe",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/misc/onwhatsapp/{{API_INSTANCE}}?number=5519997705920",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"misc",
+								"onwhatsapp",
+								"{{API_INSTANCE}}"
+							],
+							"query": [
+								{
+									"key": "number",
+									"value": "5519997705920"
+								}
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Grupos",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/group/all/{{API_INSTANCE}}",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"group",
+								"all",
+								"{{API_INSTANCE}}"
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar participantes de um grupo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/group/participants/{{API_INSTANCE}}?id=120363318026963374@g.us",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"group",
+								"participants",
+								"{{API_INSTANCE}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "120363318026963374@g.us"
+								}
+							]
+						},
+						"description": "Send an image message to WhatsApp User"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{API_KEY}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API_URL}}/status",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "API_KEY",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "API_INSTANCE",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

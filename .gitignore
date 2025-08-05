@@ -1,0 +1,11 @@
+# NODE
+node_modules
+yarn.lock
+
+# APPLICATION
+.env
+sessiondata
+
+# IDEs
+.vscode/settings.json
+.idea
