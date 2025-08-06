@@ -1,46 +1,73 @@
 # ==================================
-# SECURITY CONFIGURATION
+# 🔒 SEGURANÇA
 # ==================================
-TOKEN=1234
+
+# Token de autenticação da API (EXEMPLO - Substitua por um valor seguro)
+TOKEN=seu_token_aqui
+
+# Define se rotas da API exigem autenticação
 PROTECT_ROUTES=false
 
 # ==================================
-# APPLICATION CONFIGURATION
+# 🚀 APLICAÇÃO
 # ==================================
-PORT=3333
+
+# Porta onde o servidor será executado
+PORT=3000
+
+# Restaura sessões anteriores ao iniciar a aplicação
 RESTORE_SESSIONS_ON_START_UP=true
-APP_URL=http://localhost:3333
-LOG_LEVEL=silent
+
+# URL base da aplicação
+APP_URL=https://localhost:3000/webhook
+
+# Nível de log (opções: error, warn, info, verbose, debug)
+LOG_LEVEL=info
 
 # ==================================
-# BROWSER CONFIGURATION
+# 🌐 CLIENTE (Navegador simulado no WhatsApp)
 # ==================================
-CLIENT_PLATFORM='Convert ZAP'
+
+CLIENT_PLATFORM='BrayanAPI'
 CLIENT_BROWSER='Chrome'
-CLIENT_VERSION='4.0.0'
+CLIENT_VERSION='1.0.0'
 
 # ==================================
-# INSTANCE CONFIGURATION
+# ⚙️ INSTÂNCIA
 # ==================================
-INSTANCE_MAX_RETRY_QR=2
+
+# Número máximo de tentativas para ler o QR Code
+INSTANCE_MAX_RETRY_QR=30
 
 # ==================================
-# DATABASE CONFIGURATION
+# 🗃️ BANCO DE DADOS
 # ==================================
+
+# Habilita uso do MongoDB
 MONGODB_ENABLED=true
-#MONGODB_URL=mongodb://127.0.0.1:27017/whatsapp_api
-MONGODB_URL=mongodb+srv://consultaws:Grupoconvertzap123!AWS@cluster0.beg6ngh.mongodb.net
 
+# URL do MongoDB
+MONGODB_URL=mongodb://mongodb:27017
 
 # ==================================
-# WEBHOOK CONFIGURATION
+# 📡 WEBHOOK
 # ==================================
-WEBHOOK_ENABLED=false
-WEBHOOK_URL=https://n8n.meupainelsmm.com.br/webhook/webhook-whats-leo
+
+# Habilita envio de eventos para webhook
+WEBHOOK_ENABLED=true
+
+# URL que receberá os eventos
+WEBHOOK_URL=https://localhost:3000/webhook
+
+# Enviar mídia como base64 no payload?
 WEBHOOK_BASE64=false
-WEBHOOK_ALLOWED_EVENTS=
+
+# Eventos que o webhook pode receber (ex: all, message, status)
+WEBHOOK_ALLOWED_EVENTS=all
 
 # ==================================
-# MESSAGE CONFIGURATION
+# 💬 MENSAGENS
 # ==================================
+
+# Marcar mensagens como lidas automaticamente?
 MARK_MESSAGES_READ=false
